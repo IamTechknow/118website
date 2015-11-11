@@ -2359,8 +2359,8 @@
 			}
 
 		.main.style3 {
-			text-align: center;
-			padding: 6em 0 6em 0;
+				text-align: center;
+				padding: 20px 0px 20px 0px;
 		}
 
 			.main.style3 .content > header {
@@ -2951,6 +2951,7 @@
 		#work .row.images.inactive .image.from-bottom {
 			top: 7em;
 		}
+		
 
 /* Contact */
 
