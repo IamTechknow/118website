@@ -7,10 +7,8 @@ body:before {
 	animation: none !important;
 }
 
-/* Scale images to thumbnail size and set margins for better positioning */
+/* Set margins for better positioning */
 div img {
-	width: 20%;
-	height: 20%;
 	margin-top: 10px;
 	margin-right: 10px;
 }
