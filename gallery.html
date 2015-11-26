@@ -195,13 +195,34 @@
 		</div>
 		
 	<!-- display videos -->
-		<video controls>
-			<source src="images/robot_moves.mp4" type="video/mp4" />
-		</video>
+		<section class="main style4 secondary">
+			<div class="content container 75%">
+				<header>
+					<h2>Videos</h2>
+				</header>
+			</div>
+		</section>
 	
-		<video controls>
-			<source src="images/plunger_test.mp4" type="video/mp4" />
+	<div style="display:none;" id="video1">
+		<video class="lg-video-object lg-html5" controls preload="none">
+			<source src="images/robot_moves.mp4" type="video/mp4">
 		</video>
+	</div>
+	
+	<div style="display:none;" id="video2">
+		<video class="lg-video-object lg-html5" controls preload="none">
+			<source src="images/plunger_test.mp4" type="video/mp4">
+		</video>
+	</div>
+	
+	<ul class="lightgallery list-unstyled">
+		<li data-poster="images/week3/front_wip_thumb.jpg" data-html="#video1">
+			<img src="images/week3/front_wip_thumb.jpg" />
+		</li>
+		<li data-poster="images/week3/front_wip_thumb.jpg" data-html="#video2">
+			<img src="images/week3/front_wip_thumb.jpg" />
+		</li>
+	</ul>
 	
 	<!-- footer -->	
 		<footer id="footer">
@@ -226,6 +247,7 @@
         <script src="assets/lightGallery/js/lg-zoom.js"></script>
         <script src="assets/lightGallery/js/lg-hash.js"></script>
         <script src="assets/lightGallery/js/lg-pager.js"></script>
+		<script src="assets/lightGallery/js/lg-video.js"></script>
 		<script src="assets/lightGallery/js/jquery.mousewheel.min.js"></script>
 		
 		<!-- Webpage code here - setup gallery features -->
@@ -244,6 +266,7 @@
 		$('.lightgallery').on('onBeforeClose.lg', function(event){
 			$('header').show();
 		});
+		
 		</script>
 		
 	</body>

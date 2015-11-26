@@ -35,3 +35,16 @@ div a {
 	line-height: 20px;
 	font-weight: 500;
 }
+
+/* Videos - make it horizontial list */
+.list-unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: outside none none;
+}
+
+.list-unstyled li {
+	display: inline;
+	margin-top: 10px;
+	margin-right: 10px;
+}
