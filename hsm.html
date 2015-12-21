@@ -8,10 +8,10 @@
 		<link rel="stylesheet" href="assets/css/gallery.css" />
 		<link rel="stylesheet" href="assets/lightGallery/css/lightgallery.css" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-		
+
 	</head>
 	<body>
-	
+
 	<!-- Headers -->
 		<header id="header">
 
@@ -31,39 +31,45 @@
 					</ul>
 				</nav>
 		</header>
-		
+
 		<section class="main style4 secondary">
 			<div class="content container 75%">
 				<header>
 					<h2>Finite State Machine Design</h2>
 				</header>
-				<p>We designed and implemented finite state machines to allow deterministic behaviour of our robot. Our FSM is hierarchial and currently three levels deep. We are still fine tuning our FSMs but you can see recent versions of our FSMs in the gallery below.</p>
+				<p>We designed and implemented finite state machines to allow robust behaviour of our robot. Our FSM is hierarchial and currently three levels deep. Navigation in the finding enemy and portal states is implemented in its own state machine in the respective FSMs instead of in its own level.</p>
 			</div>
 		</section>
-		
-		
-		
+
 		<div class="lightgallery">
-			<a href="images/FindingAmmoSubHSM_1127.png" data-sub-html="<h4></h4><p></p>">
-				<img src="images/FindingAmmoSubHSM_1127_thumb.png" />  <!-- Primary design side view -->
+			<a href="images/hsm/FindingAmmoSubHSM.png">
+				<img src="images/hsm/FindingAmmoSubHSM_thumb.jpg" />
 			</a>
-			<a href="images/AligningTSubSubHSM_1127.png" data-sub-html="<h4></h4><p></p>"> 
-				<img src="images/AligningTSubSubHSM_1127_thumb.png" /> <!-- Primary design top view -->
+			<a href="images/hsm/AligningTSubSubHSM.png"> 
+				<img src="images/hsm/AligningTSubSubHSM_thumb.jpg" />
 			</a>
-			<a href="images/FindingTSubSubHSM_1127.png" data-sub-html="<h4></h4><p></p>"> 
-				<img src="images/FindingTSubSubHSM_1127_thumb.png" /> <!-- Backup design 2 -->
+			<a href="images/hsm/FindingTSubSubHSM.png"> 
+				<img src="images/hsm/FindingTSubSubHSM_thumb.jpg" />
+			</a>
+			<a href="images/hsm/TopLevelHSM.png"> 
+				<img src="images/hsm/TopLevelHSM_thumb.jpg" />
+			</a>
+			<a href="images/hsm/FindingEnemySubHSM.png"> 
+				<img src="images/hsm/FindingEnemySubHSM_thumb.jpg" />
+			</a>
+			<a href="images/hsm/FindingPortalSubHSM.png"> 
+				<img src="images/hsm/FindingPortalSubHSM_thumb.jpg" />
 			</a>
 		</div>
-	
+
 	<!-- footer -->	
 		<footer id="footer">
-				<!-- Menu -->
-					<ul class="menu">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
+			<!-- Menu -->
+				<ul class="menu">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 		</footer>
-	
+
 	<!-- Scripts - To modify lightgallery functionalty add or remove references to the plugin JS files here-->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 		<script src="assets/js/jquery.poptrox.min.js"></script>
@@ -78,9 +84,8 @@
         <script src="assets/lightGallery/js/lg-zoom.js"></script>
         <script src="assets/lightGallery/js/lg-hash.js"></script>
         <script src="assets/lightGallery/js/lg-pager.js"></script>
-		<script src="assets/lightGallery/js/lg-video.js"></script>
 		<script src="assets/lightGallery/js/jquery.mousewheel.min.js"></script>
-		
+
 		<!-- Webpage code here - setup gallery features -->
 		<script type="text/javascript">
 		$(document).ready(function() {
@@ -99,6 +104,6 @@
 		});
 		
 		</script>
-		
+
 	</body>
 </html>
