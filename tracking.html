@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The Fearsome Forcesome Mechatronics team</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/gallery.css" />
+		<link rel="stylesheet" href="assets/lightGallery/css/lightgallery.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+
+	<!-- Headers -->
+		<header id="header">
+
+			<!-- Logo -->
+				<h1 id="logo"><a href="index.html">The Fearsome Forcesome</a></h1>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="/118websiteblog/">Blog</a></li>
+						<li><a href="index.html#intro">Intro</a></li>
+						<li><a href="index.html#one">The Team</a></li>
+						<li><a href="index.html#two">Robot Design and Gallery</a></li>
+						<li><a href="index.html#gantt">Gantt Chart</a></li>
+					</ul>
+				</nav>
+		</header>
+
+		<section class="main style4 secondary">
+			<div class="content container 75%">
+				<header>
+					<h2>Line Tracking</h2>
+				</header>
+				<p>Implementing Line following and detection was the most difficult part of the finite state machine of our robot. To detect the black tape, we had to position our tape sensors through holes we cut on our base to be very close to the floor, then determine the hysteresis values of which the tape sensors detect black tape or the white surface of the field. </p>
+				
+				<p>Line following was needed to reach the ammo depot. In FindingAmmoSubHSM (see the first image), when the front tape sensor detects the black tape the robot will transition between BlackTapeFront and MovingFWD, where it will bobble along the line to straighten itself out while going forward. The robot would quickly turn in the opposite direction when the front tape sensor detected white then move straight forward, and repeat this until it no longer goes outside of the black tape. This was simple and robust as long as the front tape sensor was working.</p>
+				
+				<p>Line tracking is then used at the end of FindingTSubSubHSM, in which while wall riding, the robot is checking for black tape with its front sensor. Once black tape is found, the robot goes forward briefly before turning to align with the ammo depot.</p>
+				
+				<p>In AligningTSubSubHSM, line detecting while obtaining the ammo was much more difficult because our robot did not turn consistently and did not always end up in the same place to detect the black tape near the ammo depot. To align with the depot by detecting the T-shaped tape, we tried both timed events and line tracking individually, but neither method was reliable and line tracking was rather difficult because if the robot did not align with the tape the first time, then it would have a hard time trying to realign. To solve this, we made the robot hit the ammo depot mutiple times, while rotating slightly in each succession. This was a much better alterative to attempting to align perfectly with the T when all five sensors detected the tape, which is possible for our robot in theory but was never done autonomously.</p>
+			</div>
+		</section>
+
+		<div class="lightgallery">
+			<a href="images/hsm/FindingAmmoSubHSM.png">
+				<img src="images/hsm/FindingAmmoSubHSM_thumb.jpg" />
+			</a>
+			<a href="images/hsm/FindingTSubSubHSM.png"> 
+				<img src="images/hsm/FindingTSubSubHSM_thumb.jpg" />
+			</a>
+			<a href="images/hsm/AligningTSubSubHSM.png"> 
+				<img src="images/hsm/AligningTSubSubHSM_thumb.jpg" />
+			</a>
+		</div>
+
+	<!-- footer -->	
+		<footer id="footer">
+			<!-- Menu -->
+				<ul class="menu">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+		</footer>
+
+	<!-- Scripts - To modify lightgallery functionalty add or remove references to the plugin JS files here-->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/lightGallery/js/lightgallery.js"></script>
+        <script src="assets/lightGallery/js/lg-fullscreen.js"></script>
+        <script src="assets/lightGallery/js/lg-autoplay.js"></script>
+        <script src="assets/lightGallery/js/lg-zoom.js"></script>
+        <script src="assets/lightGallery/js/lg-hash.js"></script>
+        <script src="assets/lightGallery/js/lg-pager.js"></script>
+		<script src="assets/lightGallery/js/jquery.mousewheel.min.js"></script>
+
+		<!-- Webpage code here - setup gallery features -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$(".lightgallery").lightGallery({
+				pager: true
+			}); 
+		});
+		
+		<!-- Event listeners to hide or show site header -->
+		$('.lightgallery').on('onBeforeOpen.lg',function(event){
+			$('header').hide();
+		});
+		
+		$('.lightgallery').on('onBeforeClose.lg', function(event){
+			$('header').show();
+		});
+		
+		</script>
+
+	</body>
+</html>
