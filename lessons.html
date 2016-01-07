@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The Fearsome Forcesome Mechatronics team</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/gallery.css" />
+		<link rel="stylesheet" href="assets/lightGallery/css/lightgallery.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+
+	<!-- Headers -->
+		<header id="header">
+
+			<!-- Logo -->
+				<h1 id="logo"><a href="index.html">The Fearsome Forcesome</a></h1>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="/118websiteblog/">Blog</a></li>
+						<li><a href="index.html#intro">Intro</a></li>
+						<li><a href="index.html#one">The Team</a></li>
+						<li><a href="index.html#two">Robot Design and Gallery</a></li>
+						<li><a href="index.html#gantt">Gantt Chart</a></li>
+					</ul>
+				</nav>
+		</header>
+
+		<section class="main style4 secondary">
+			<div class="content container 75%">
+				<header>
+					<h2>Lessons Learned</h2>
+				</header>
+				<p>In our report for this project, we wrote our thoughts on lessons we learned during this project which may be valuable to future projects and our careers.</p>
+				<p>Assign Roles to Specific Team Members
+Something I think could've worked well for this type of project is assigning roles to each team member. So each team would designate a manager or Leader, and the role could be passed weekly, but this team member would be in charge of making final decisions and managing progress of whole team and aid in getting everything integrated. In essence would have his hand in all that was going on. Another role could be putting some in charge of documenting all the work of the group. This would involve interacting with all the team member and note their progress. Then he would update the whole group so at all times everyone knows where we stand in all aspects of the project. Additionally having at least two members involved in all tasks. To illustrate this, Jake did most of the circuit design in early stages and in the later stages of the project when the circuitry needed to be debugged we were reliant on having Jake in the lab to get it working again. Having another person heavily involved in this could have prevented this.
+
+Assign tasks to team members
+Although we had the organization to create: a GANTT chart, calendar, and scrum board, we did not have a place where we assigned tasks to individual members of our group. This created over-manned or under-manned parts of the project that were being worked on. Assigning tasks would have greatly increased the parallelness of progress. 
+
+
+Address team conflicts as soon as they become known.
+
+Draw more detailed  initial sketches. And Rapid Prototyping, even with the constant reminder of designing and testing fast and early. Our pace was slow and having more prototype versions could have introduced issues in the earlier stages. For Instance the issue with having the plunger, and bumpers on the same side.
+
+The importance of preplanning is also something learned. We had many instances where we spent a lot of time writing code to have it only started over by another member who had an idea that was believed to work better. This caused  some work to be wasted. I believe that having a plan laid out before any code was written and having the whole team agree to the plan of attack, would have saved the team a lot of time.
+We also learned what it takes to manage a team, more so the work it actually takes and the skills that are useful in doing so. Like what needs to be done to get a group to work better together, and what it would take to get the most of all team members. 
+
+Have plenty of spare parts in case something goes wrong or gets lost
+
+We broke or had quite a few things break on us throughout this project including voltage regulators, a motor, fuses, tape sensors, a servo, and a bump sensor. We had plenty of spare 5V and 3.3V regulators and could always get more fuses, but we were very fortunate that we didn't have more sensors malfunction on us. We only bought five sensors and ended up using all 5, but we would have bought a set of 15 instead, which doesn't cost much more and would help us a lot if we found that all of our sensors were too sensitive or suddenly malfunction. If we don't feel like spending more money for shipping, then we can still sample for electronics such as regulators and op-amp chips. We also lost the ball caster we bought and were fortunate another team could spare us one.</p>
+			</div>
+		</section>
+
+	<!-- footer -->	
+		<footer id="footer">
+			<!-- Menu -->
+				<ul class="menu">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+		</footer>
+
+	<!-- Scripts - To modify lightgallery functionalty add or remove references to the plugin JS files here-->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/lightGallery/js/lightgallery.js"></script>
+        <script src="assets/lightGallery/js/lg-fullscreen.js"></script>
+        <script src="assets/lightGallery/js/lg-autoplay.js"></script>
+        <script src="assets/lightGallery/js/lg-zoom.js"></script>
+        <script src="assets/lightGallery/js/lg-hash.js"></script>
+        <script src="assets/lightGallery/js/lg-pager.js"></script>
+		<script src="assets/lightGallery/js/jquery.mousewheel.min.js"></script>
+
+		<!-- Webpage code here - setup gallery features -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$(".lightgallery").lightGallery({
+				pager: true
+			}); 
+		});
+		
+		<!-- Event listeners to hide or show site header -->
+		$('.lightgallery').on('onBeforeOpen.lg',function(event){
+			$('header').hide();
+		});
+		
+		$('.lightgallery').on('onBeforeClose.lg', function(event){
+			$('header').show();
+		});
+		
+		</script>
+
+	</body>
+</html>
